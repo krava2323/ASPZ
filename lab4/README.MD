@@ -85,7 +85,28 @@ while (<some-condition-is-true>) {
 [Код](lab4_6/lab4_6.c)
 
 ## Опис програми
-
+Програма викликає realloc(NULL, 100) на о функція повертає вказівник , потім память звільняється , realloc(NULL, size) працює як malloc(size) створюючи новий блок памяті ,realloc(ptr, 0) звільняє памʼять і повертає NULL.
 
 ## Результат 
 ![lab4](lab4_6/4_6.png)
+
+
+## Завдання 7
+Перепишіть наступний код, використовуючи reallocarray(3):
+struct sbar *ptr, *newptr;
+ptr = calloc(1000, sizeof(struct sbar));
+newptr = realloc(ptr, 500*sizeof(struct sbar));
+
+Порівняйте результати виконання з використанням ltrace.
+
+
+ ## Код програми 
+[Код](lab4_7/lab4_7.c)
+
+## Опис програми
+Програма викликає realloc(NULL, 100) на о функція повертає вказівник , потім память звільняється , realloc(NULL, size) працює як malloc(size) створюючи новий блок памяті ,realloc(ptr, 0) звільняє памʼять і повертає NULL.
+
+## Результат 
+![lab4](lab4_7/4_7.png)
+![lab4](lab4_7/4_71.png)
+
